@@ -217,8 +217,8 @@ class Vector {
         return tempIt;
       }
 
-      bool operator==(const const_iterator& other) const { return ptr == other.operator->; }
-      bool operator!=(const const_iterator& other) const { return ptr != other.operator->; }
+      bool operator==(const const_iterator& other) const { return ptr == other.operator->(); }
+      bool operator!=(const const_iterator& other) const { return ptr != other.operator->(); }
 
       operator const_iterator() const {
         return ConstIterator(ptr);
@@ -252,8 +252,8 @@ class Vector {
         return tempIt;
       }
 
-      bool operator==(const const_iterator& other) const { return ptr == other.operator->; }
-      bool operator!=(const const_iterator& other) const { return ptr != other.operator->; }
+      bool operator==(const const_iterator& other) const { return ptr == other.operator->(); }
+      bool operator!=(const const_iterator& other) const { return ptr != other.operator->(); }
 
       friend difference_type operator-(const ConstIterator& lop, const ConstIterator& rop) {
         return lop.ptr - rop.ptr;
