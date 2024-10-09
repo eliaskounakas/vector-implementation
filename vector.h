@@ -34,7 +34,7 @@ class Vector {
     };
 
     Vector(std::size_t n) {
-      sz = n;
+      sz = 0;
       max_sz = n;
       values = new value_type[n];
     };
